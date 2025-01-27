@@ -1,0 +1,13 @@
+streamlit
+openai
+python-dotenv
+PyPDF2
+pandas
+pydub
+langchain-community
+langchain-openai
+faiss-cpu
+SpeechRecognition
+pyaudio
+numpy
+tiktoken
