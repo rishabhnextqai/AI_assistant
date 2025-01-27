@@ -35,7 +35,7 @@ import pyaudio
 load_dotenv()
 
 # Initialize OpenAI client
-client = OpenAI(api_key=st.secrets["environment_variables"]["OPENAI_API_KEY"])
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 # Streamlit configuration
 st.set_page_config(page_title="AI Assistant", page_icon="🤖", layout="wide")
