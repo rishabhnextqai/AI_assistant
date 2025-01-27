@@ -1,0 +1,2 @@
+swig
+portaudio19-dev
