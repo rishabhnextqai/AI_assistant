@@ -1,2 +1,4 @@
 swig
 portaudio19-dev
+build-essential 
+python3-dev
