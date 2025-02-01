@@ -306,7 +306,7 @@ Follow these detailed guidelines to ensure the podcast is conversational, insigh
 
 5. **Structure**:
    - Conclude with a summary of key takeaways and a motivational call-to-action for listeners to drive engagement.
-   - Ensure the entire script exceeds 1000 words for depth and coverage.
+   - Ensure the entire script is around 1000 words for depth and coverage.
 
 6. **Dialogue Style**:
    - Use alternating dialogue format between Zoe and Ethan:
@@ -574,7 +574,7 @@ def create_podcast(script: str) -> Optional[AudioSegment]:
                 logger.info(f"Processing line {i+1}/{len(lines)} for voice: {voice}")
                 logger.info(f"Generating new audio for line {i+1}")
                 audio_segment = AudioSegment.from_mp3(io.BytesIO(audio_content))
-                audio_segment = audio_segment.speedup(playback_speed=1.25)
+                # audio_segment = audio_segment.speedup(playback_speed=1.25)
                 audio_segments.append(audio_segment)
                 logger.info(f"Audio generated for line {i+1}")
             except Exception as e:
