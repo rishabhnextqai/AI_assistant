@@ -287,8 +287,8 @@ Follow these detailed guidelines to ensure the podcast is conversational, insigh
    - Start with a brief, energetic introduction to the podcast's purpose, emphasizing its focus on strategic priorities and key initiatives.
    - Skip detailed introductions of Zoe and Ethan. Zoe should take the lead in setting the tone.
 
-2. **Top 3 Initiatives**:
-   - For each of the top three initiatives:
+2. **Best 4 Initiatives**:
+   - For each of the best four initiatives:
      - Summarize its context or importance to the client in an engaging way.
      - Discuss recommended alignment with practical, actionable suggestions.
      - Highlight one relevant case study that demonstrates success and aligns with the initiative.
@@ -793,6 +793,54 @@ def main():
                                     logger.error(f"Audio export error: {str(e)}")
                         else:
                             st.error("Failed to generate podcast audio. Please try again or contact support.")
+
+                        
+                        if podcast_audio_stakeholders or podcast_audio_competitors or podcast_audio_businessoverview or podcast_audio:
+                            try:
+                                # Create a ZIP file in memory
+                                with io.BytesIO() as zip_buffer:
+                                    with zipfile.ZipFile(zip_buffer, "w") as zip_file:
+                                        # Add each audio file to the ZIP archive
+                                        if podcast_audio_stakeholders:
+                                            with io.BytesIO() as audio_buffer:
+                                                podcast_audio_stakeholders.export(audio_buffer, format="mp3")
+                                                audio_buffer.seek(0)
+                                                zip_file.writestr("ai_generated_podcast_stakeholders.mp3", audio_buffer.read())
+                                        
+                                        if podcast_audio_competitors:
+                                            with io.BytesIO() as audio_buffer:
+                                                podcast_audio_competitors.export(audio_buffer, format="mp3")
+                                                audio_buffer.seek(0)
+                                                zip_file.writestr("ai_generated_podcast_competitors.mp3", audio_buffer.read())
+                                        
+                                        if podcast_audio_businessoverview:
+                                            with io.BytesIO() as audio_buffer:
+                                                podcast_audio_businessoverview.export(audio_buffer, format="mp3")
+                                                audio_buffer.seek(0)
+                                                zip_file.writestr("ai_generated_podcast_businessoverview.mp3", audio_buffer.read())
+                                        
+                                        if podcast_audio:
+                                            with io.BytesIO() as audio_buffer:
+                                                podcast_audio.export(audio_buffer, format="mp3")
+                                                audio_buffer.seek(0)
+                                                zip_file.writestr("ai_generated_podcast.mp3", audio_buffer.read())
+                                    
+                                    # Finalize the ZIP file
+                                    zip_buffer.seek(0)
+                        
+                                    # Provide a download button for the ZIP file
+                                    st.download_button(
+                                        label="Download All Podcasts",
+                                        data=zip_buffer.getvalue(),
+                                        file_name="all_podcasts.zip",
+                                        mime="application/zip"
+                                    )
+                            except Exception as e:
+                                st.error("Error exporting audio. Please try again or contact support.")
+                                logger.error(f"Audio export error: {str(e)}")
+                        else:
+                            st.error("Failed to generate podcast audio. Please try again or contact support.")
+
 
     st.markdown("---")
     st.markdown("Created by NextQAI")
