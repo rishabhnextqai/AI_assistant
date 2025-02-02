@@ -30,6 +30,7 @@ from streamlit.runtime.scriptrunner import add_script_run_ctx
 import uuid
 import random
 import pyaudio
+import zipfile
 
 # Load environment variables
 load_dotenv()
