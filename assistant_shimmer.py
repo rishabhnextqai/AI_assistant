@@ -720,7 +720,7 @@ def main():
                 st.error(file_contents)
             else:
                 if st.button("Generate Briefings"):
-                    with st.spinner("Generating breifing transcripts..."):
+                    with st.spinner("Generating briefing transcripts..."):
                         script = generate_podcast_script(file_contents, 'exec')
                         script_businessoverview = generate_podcast_script(file_contents, 'businessoverview')
                         script_competitors = generate_podcast_script(file_contents, 'competitors')
