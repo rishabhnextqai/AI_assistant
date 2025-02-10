@@ -285,8 +285,7 @@ Create a dynamic and engaging podcast script for "Next Quarter's Executive Brief
 Follow these detailed guidelines to ensure the podcast is conversational, insightful, and actionable:
 
 1. **Introduction**:
-   - Start with "Welcome to Next Quarter's briefing on `account_name`, prepared exclusively for `client_name`."
-     (Fetch `account_name` and `client_name` automatically from the `file_contents`.)
+   - Find the account name and the client name and start with "Welcome to Next Quarter's briefing on `account name`, prepared exclusively for `client name`."
    - Provide an outline of what will be covered in the episode to help listeners follow along.
    - Let Host1 take the lead in setting the tone and starting the introduction.
 
@@ -314,7 +313,6 @@ Follow these detailed guidelines to ensure the podcast is conversational, insigh
 5. **Structure**:
    - Conclude with a summary of key takeaways and a motivational call-to-action for listeners to drive engagement.
    - End with: "You can always find more details about `account_name` in the full intelligence report provided by Next Quarter."
-     (Replace `account_name` dynamically with data from `file_contents`.)
    - Ensure the entire script exceeds 1000 words for depth and coverage.
 
 6. **Dialogue Style**:
