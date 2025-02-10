@@ -322,7 +322,7 @@ Follow these detailed guidelines to ensure the podcast is conversational, insigh
      - Host1: [Host1's dialogue]
      - Host2: [Host2's dialogue]
      - Continue this pattern throughout the script, with one host leading each section for better flow.
-   - Avoid naming the hosts within their dialogue; instead, focus on natural conversational phrasing.
+   - Don't name the hosts within their dialogue or anywhwere in the script; instead, focus on natural conversational phrasing.
    - Encourage lighthearted yet professional back-and-forth dialogue when appropriate.
 
 7. **TED Talk-Style Approach**:
@@ -639,7 +639,7 @@ def create_podcast(script: str) -> Optional[AudioSegment]:
 def main():
     st.title("AI Assistant")
 
-    tab1, tab2 = st.tabs(["Conversational AI", "Podcast Generator"])
+    tab1, tab2 = st.tabs(["Conversational AI", "Audio Briefing Generator"])
 
     with tab1:
         st.header("Chat with AI")
