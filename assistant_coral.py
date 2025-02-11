@@ -648,9 +648,9 @@ def create_podcast(script: str) -> Optional[AudioSegment]:
                 audio_segment = AudioSegment.from_mp3(io.BytesIO(audio_content))
                 
                 # Adjust playback speed for "coral" voice
-                if voice == "coral":
-                    logger.info(f"Adjusting playback speed to 90% for line {i+1}")
-                    audio_segment = audio_segment.speedup(playback_speed=0.75)
+                # if voice == "coral":
+                #     logger.info(f"Adjusting playback speed to 90% for line {i+1}")
+                #     audio_segment = audio_segment.speedup(playback_speed=0.75)
                 
                 # Append the processed segment
                 audio_segments.append(audio_segment)
