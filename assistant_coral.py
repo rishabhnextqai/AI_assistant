@@ -337,7 +337,7 @@ Follow these detailed guidelines to ensure the podcast is conversational, insigh
 
 4. **Tone and Delivery**:
    - Maintain an enthusiastic and conversational tone throughout.
-   - Avoid overly long pauses or forced transitions like "oh great" or "absolutely."
+   - Avoid overly long pauses and don't include forced transitions like "oh great" or "absolutely."
    - Allow natural reactions between hosts but avoid making them feel scripted or excessive.
    - Keep transitions smooth by letting one host lead entire sections instead of frequent back-and-forth exchanges.
 
