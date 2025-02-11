@@ -343,7 +343,7 @@ Follow these detailed guidelines to ensure the podcast is conversational, insigh
 5. **Structure**:
    - Conclude with a summary of key takeaways and a motivational call-to-action for listeners to drive engagement.
    - End with: "You can always find more details about {{account_name}} in the full intelligence report provided by Next Quarter."
-   - Ensure the entire script exceeds 900 words for depth and coverage.
+   - Ensure the entire script exceeds 950 words for depth and coverage.
 
 6. **Dialogue Style**:
    - Use alternating dialogue format between Host1 and Host2:
