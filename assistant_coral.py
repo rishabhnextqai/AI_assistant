@@ -628,7 +628,7 @@ def create_podcast(script: str) -> Optional[AudioSegment]:
     
     def process_line(line: str):
         if line.startswith("Host1:"):
-            return text_to_speech_stream(line[5:].strip(), voice="ash")
+            return text_to_speech_stream(line[6:].strip(), voice="ash")
         elif line.startswith("Host2:"):
             return text_to_speech_stream(line[6:].strip(), voice="coral")
         return None
@@ -643,8 +643,16 @@ def create_podcast(script: str) -> Optional[AudioSegment]:
                 voice = "ash" if line.startswith("Host1:") else "coral"
                 logger.info(f"Processing line {i+1}/{len(lines)} for voice: {voice}")
                 logger.info(f"Generating new audio for line {i+1}")
+                
+                # Convert the audio content to an AudioSegment
                 audio_segment = AudioSegment.from_mp3(io.BytesIO(audio_content))
-                # audio_segment = audio_segment.speedup(playback_speed=1.25)
+                
+                # Adjust playback speed for "coral" voice
+                if voice == "coral":
+                    logger.info(f"Adjusting playback speed to 90% for line {i+1}")
+                    audio_segment = audio_segment.speedup(playback_speed=0.9)
+                
+                # Append the processed segment
                 audio_segments.append(audio_segment)
                 logger.info(f"Audio generated for line {i+1}")
             except Exception as e:
