@@ -115,18 +115,21 @@ def speak(text):
         logger.error(f"Error in text-to-speech: {str(e)}")
 
 def read_file_content(uploaded_file):
+    
+    account_name, client_name = extract_account_and_client_names(uploaded_file.name)
+        
     file_type = uploaded_file.type
     file_content = io.BytesIO(uploaded_file.read())
     
     try:
         if file_type == "text/plain":
-            return file_content.getvalue().decode("utf-8", errors="replace")
+            return file_content.getvalue().decode("utf-8", errors="replace"), account_name, client_name
         elif file_type == "application/pdf":
             pdf_reader = PyPDF2.PdfReader(file_content)
-            return " ".join(page.extract_text() for page in pdf_reader.pages)
+            return " ".join(page.extract_text() for page in pdf_reader.pages), account_name, client_name
         elif file_type == "text/csv":
             df = pd.read_csv(file_content)
-            return df.to_string()
+            return df.to_string(), account_name, client_name
         else:
             return "Error: Unsupported file type. Please upload a TXT, PDF, or CSV file."
     except Exception as e:
@@ -303,19 +306,17 @@ def process_audio_queue():
         except queue.Empty:
             pass
 
-def generate_podcast_script(file_contents: str, podcast) -> str:
-    account_name = st.session_state.get("account_name", "Unknown Account")
-    client_name = st.session_state.get("client_name", "Unknown Client")
+def generate_podcast_script(file_contents: str, podcast, account_name, client_name) -> str:
     if podcast == 'exec':
         prompt = f"""
-Create a dynamic and engaging podcast script for "Next Quarter's Executive Briefing" featuring two hosts, Host1 and Host2. The podcast should focus on strategic priorities and key initiatives for a specific account, using the provided content as the foundation:
+Create a dynamic and engaging podcast script for "Next Quarter's Executive Briefing" featuring two hosts, Host1 and Host2. The podcast should focus on strategic priorities and key initiatives for {account_name}, using the provided content as the foundation:
 
 {file_contents}
 
 Follow these detailed guidelines to ensure the podcast is conversational, insightful, and actionable:
 
 1. **Introduction**:
-   - Start exactly with "Host1:Welcome to Next Quarter's briefing on {{account_name}}, prepared exclusively for {{client_name}}."
+   - Start exactly with "Host1:Welcome to Next Quarter's briefing on {account_name}, prepared exclusively for {client_name}."
    - Provide an outline of what will be covered in the episode to help listeners follow along.
    - Let Host1 take the lead in setting the tone and starting the introduction followed by Host2.
 
@@ -336,13 +337,13 @@ Follow these detailed guidelines to ensure the podcast is conversational, insigh
 
 4. **Tone and Delivery**:
    - Maintain an enthusiastic and conversational tone throughout.
-   - Avoid overly long pauses or forced transitions like "oh great" or "absolutely."
+   - Avoid overly long pauses and don't include forced transitions like "oh great" or "absolutely."
    - Allow natural reactions between hosts but avoid making them feel scripted or excessive.
    - Keep transitions smooth by letting one host lead entire sections instead of frequent back-and-forth exchanges.
 
 5. **Structure**:
    - Conclude with a summary of key takeaways and a motivational call-to-action for listeners to drive engagement.
-   - End with: "You can always find more details about {{account_name}} in the full intelligence report provided by Next Quarter."
+   - End with: "You can always find more details about {account_name} in the full intelligence report provided by Next Quarter."
    - Ensure the entire script exceeds 950 words for depth and coverage.
 
 6. **Dialogue Style**:
@@ -743,17 +744,17 @@ def main():
         podcast_file = st.file_uploader("Upload a file for briefing generation", type=["txt", "pdf", "csv"])
 
         if podcast_file is not None:
-            file_contents = read_file_content(podcast_file)
+            file_contents, account_name, client_name = read_file_content(podcast_file)
             
             if file_contents.startswith("Error:"):
                 st.error(file_contents)
             else:
                 if st.button("Generate Briefings"):
                     with st.spinner("Generating briefing transcripts..."):
-                        script = generate_podcast_script(file_contents, 'exec')
-                        script_businessoverview = generate_podcast_script(file_contents, 'businessoverview')
-                        script_competitors = generate_podcast_script(file_contents, 'competitors')
-                        script_stakeholders = generate_podcast_script(file_contents, 'stakeholders')
+                        script = generate_podcast_script(file_contents, 'exec', account_name, client_name)
+                        script_businessoverview = generate_podcast_script(file_contents, 'businessoverview', account_name, client_name)
+                        script_competitors = generate_podcast_script(file_contents, 'competitors', account_name, client_name)
+                        script_stakeholders = generate_podcast_script(file_contents, 'stakeholders', account_name, client_name)
                         
                     
                     if script.startswith("Error:"):
