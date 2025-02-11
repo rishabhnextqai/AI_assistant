@@ -31,6 +31,7 @@ import uuid
 import random
 import pyaudio
 import zipfile
+import re
 
 # Load environment variables
 load_dotenv()
@@ -76,6 +77,27 @@ EXIT_KEYWORD = "goodbye assistant"
 
 # Conversation fillers
 FILLERS = ["Um", "Uh", "Let's see", "Well", "Hmm"]
+
+def extract_account_and_client_names(filename: str):
+    """
+    Extracts account name and client name from the uploaded filename.
+    The filename format is expected to be:
+    accountname_intelligence_report_on_clientname_...
+    """
+    try:
+        # Match common patterns in filenames
+        match = re.search(r"(.+?)_intelligence_report_on_(.+?)(?:_|$)", filename)
+        if match:
+            account_name = match.group(1).replace("_", " ").title()
+            client_name = match.group(2).replace("_", " ").title()
+            return account_name, client_name
+        else:
+            logger.warning(f"Filename does not match expected pattern: {filename}")
+            return "Unknown Account", "Unknown Client"
+    except Exception as e:
+        logger.error(f"Error extracting account and client names: {str(e)}")
+        return "Unknown Account", "Unknown Client"
+
 
 def add_filler():
     return random.choice(FILLERS) + ", " if random.random() < 0.3 else ""
@@ -142,6 +164,12 @@ def process_uploaded_file(uploaded_file):
         temp_file_path = temp_file.name
     
     try:
+        account_name, client_name = extract_account_and_client_names(uploaded_file.name)
+        
+        # Store extracted names in session state
+        st.session_state.account_name = account_name
+        st.session_state.client_name = client_name
+
         if uploaded_file.name.endswith('.pdf'):
             loader = PyPDFLoader(temp_file_path)
         elif uploaded_file.name.endswith('.csv'):
@@ -276,6 +304,8 @@ def process_audio_queue():
             pass
 
 def generate_podcast_script(file_contents: str, podcast) -> str:
+    account_name = st.session_state.get("account_name", "Unknown Account")
+    client_name = st.session_state.get("client_name", "Unknown Client")
     if podcast == 'exec':
         prompt = f"""
 Create a dynamic and engaging podcast script for "Next Quarter's Executive Briefing" featuring two hosts, Host1 and Host2. The podcast should focus on strategic priorities and key initiatives for a specific account, using the provided content as the foundation:
@@ -285,14 +315,13 @@ Create a dynamic and engaging podcast script for "Next Quarter's Executive Brief
 Follow these detailed guidelines to ensure the podcast is conversational, insightful, and actionable:
 
 1. **Introduction**:
-   - Start with "Welcome to Next Quarter's briefing on `account_name`, prepared exclusively for `client_name`."
-     (Fetch `account_name` and `client_name` automatically from the `file_contents`.)
+   - Start exactly with "Host1:Welcome to Next Quarter's briefing on {{account_name}}, prepared exclusively for {{client_name}}."
    - Provide an outline of what will be covered in the episode to help listeners follow along.
-   - Let Host1 take the lead in setting the tone and starting the introduction.
+   - Let Host1 take the lead in setting the tone and starting the introduction followed by Host2.
 
-2. **Best 4 Initiatives**:
+2. **First 4 Initiatives**:
    - Count the total number of initiatives mentioned in the content and state: "Out of X initiatives, we are focusing on the top 4."
-   - For each of these top four initiatives:
+   - For each of these first four initiatives:
      - Summarize its context or importance to the client in an engaging way.
      - Discuss recommended alignment with practical, actionable suggestions.
      - Highlight one relevant case study that demonstrates success and aligns with the initiative.
@@ -313,26 +342,26 @@ Follow these detailed guidelines to ensure the podcast is conversational, insigh
 
 5. **Structure**:
    - Conclude with a summary of key takeaways and a motivational call-to-action for listeners to drive engagement.
-   - End with: "You can always find more details about `account_name` in the full intelligence report provided by Next Quarter."
-     (Replace `account_name` dynamically with data from `file_contents`.)
-   - Ensure the entire script exceeds 1000 words for depth and coverage.
+   - End with: "You can always find more details about {{account_name}} in the full intelligence report provided by Next Quarter."
+   - Ensure the entire script exceeds 900 words for depth and coverage.
 
 6. **Dialogue Style**:
    - Use alternating dialogue format between Host1 and Host2:
      - Host1: [Host1's dialogue]
      - Host2: [Host2's dialogue]
      - Continue this pattern throughout the script, with one host leading each section for better flow.
-   - Don't name the hosts within their dialogue or anywhwere in the script; instead, focus on natural conversational phrasing.
+   - Don't name the hosts within their dialogue or anywhere in the script; instead, focus on natural conversational phrasing.
    - Encourage lighthearted yet professional back-and-forth dialogue when appropriate.
 
 7. **TED Talk-Style Approach**:
    - Structure the podcast like a TED Talk by clearly outlining key points at the start, diving into each topic with engaging storytelling, and wrapping up with an inspiring conclusion.
    - Use compelling examples and narratives to keep listeners engaged while conveying actionable insights.
 
-By following these updated guidelines, craft a compelling podcast script that informs, motivates, and captivates listeners while addressing strategic priorities effectively.
+By following these guidelines, craft a compelling podcast script that informs, motivates, and captivates listeners while addressing strategic priorities effectively.
 
 Script:
 """
+
 
 
 
