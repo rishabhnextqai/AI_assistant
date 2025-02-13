@@ -660,61 +660,118 @@ def generate_podcast_script_ABM(file_contents: str, account_name, client_name) -
 # Script:
 # """
 
-    prompt = f"""
-Create a dynamic and engaging podcast script for "Next Quarter's ABM Deep Dive" featuring two hosts, Host1 and Host2. The podcast should focus on strategically important personas for {account_name}, using the provided content as the foundation:
+#     prompt = f"""
+# Create a dynamic and engaging podcast script for "Next Quarter's ABM Deep Dive" featuring two hosts, Host1 and Host2. The podcast should focus on strategically important personas for {account_name}, using the provided content as the foundation:
+
+# {file_contents}
+
+# Follow these detailed guidelines to ensure the podcast is conversational, insightful, and actionable:
+
+# 1.  **[Introduction]**:
+#     *   Start exactly with "Host1: Welcome to Next Quarter's ABM summary on {account_name}'s key personas, prepared exclusively for {client_name}."
+#     *   Provide a concise outline of the episode's key areas: a persona overview, initiative alignment, and Account-Based Marketing channel strategies. Emphasize how understanding these elements can drive more effective engagement.
+#     *   Let Host1 take the lead in setting the tone and starting the introduction, followed by Host2.
+
+# 2.  **[Persona Selection & Deep Dive]**:
+#     *   Identify the total number of personas detailed in the provided document. State: "This report identifies X key personas at {account_name}. We'll focus on a select few of the most strategically impactful."
+#     *   **[Selection Criteria]:** Explain that personas were chosen based on their influence over key strategic initiatives and their relevance to {client_name}'s offerings. Aim to select 3-4 personas.
+#     *   For each selected persona:
+#         *   **[Persona Summary]**:
+#             *   Clearly state the persona's name and job title. Provide a concise summary of their core responsibilities, key objectives, and overall influence within {account_name}. Focus on aspects that are most relevant to {client_name} (approximately 60 words).
+#         *   **[Initiatives and {client_name} Alignment]**:
+#             *   Prioritize the 2-3 most relevant initiatives from the document, focusing on initiatives that directly align with {client_name}'s offerings and areas of expertise.
+#             *   For each initiative:
+#                 *   Summarize the initiative, emphasizing its importance to the persona's goals and {account_name}'s broader strategic objectives (approximately 50 words).
+#                 *   Detail recommended alignment strategies. Provide specific, actionable steps that {client_name} can take to support the initiative and engage the persona. Focus on delivering tangible value (approximately 50 words).
+#         *   **[ABM Channels]**:
+#             *   Recommend the most effective ABM channels for engaging this persona. Justify these choices by explaining how the channels align with the persona's preferences and information consumption habits. Consider both digital and traditional channels (approximately 50 words).
+#         *   Keep each persona discussion concise (approximately 220 words total per persona), while focusing on actionable insights.
+#         *   Alternate between Host1 and Host2 for presenting each persona, creating a natural conversational flow.
+
+# 3.  **[Tone and Delivery]**:
+#     *   Maintain an enthusiastic and conversational tone throughout the podcast.
+#     *   Avoid overly long pauses and forced transitions.
+#     *   Encourage natural reactions and lighthearted back-and-forth dialogue when appropriate, but keep it professional.
+#     *   Maintain smooth transitions by allowing one host to lead entire sections instead of frequent back-and-forth exchanges.
+
+# 4.  **[Structure]**:
+#     *   Conclude with a summary of key takeaways, reinforcing the importance of understanding these personas and aligning with their initiatives. Include a clear and motivational call to action, encouraging listeners to take concrete steps to engage these individuals.
+#     *   End with: "You can always find more details about {account_name}'s key influencers in the full intelligence report provided by Next Quarter."
+#     *   Ensure the entire script is substantial and well-developed. The target length is 900-1100 words to provide sufficient depth and coverage.
+
+# 5.  **[Dialogue Style]**:
+#     *   Use an alternating dialogue format between Host1 and Host2:
+#         *   Host1: \[Host1's dialogue]
+#         *   Host2: \[Host2's dialogue]
+#         *   Continue this pattern throughout the script, with one host leading each section for better flow.
+#     *   Don't explicitly name the hosts within their dialogue or anywhere in the script; instead, focus on natural conversational phrasing.
+
+# 6.  **[Strategic Focus (TED Talk Style)]**:
+#     *   Emulate a TED Talk by clearly outlining key points at the beginning, delving into each persona with engaging, story-driven insights, and concluding with an inspiring and actionable summary.
+#     *   Use compelling examples and narratives to keep listeners engaged while conveying actionable insights about influencing these personas and driving meaningful engagement.
+
+# By following these guidelines, create a compelling podcast script that is informative, motivating, and captivates listeners while effectively addressing strategic priorities. Focus on providing actionable advice for engaging key personas to drive results for {client_name}.
+
+# Script:
+# """
+    prompt = f""" Create a dynamic and engaging podcast script for "Next Quarter's ABM Deep Dive" featuring two hosts, Host1 and Host2. The podcast should focus on strategically important personas for {account_name}, using the provided content as the foundation:
 
 {file_contents}
 
 Follow these detailed guidelines to ensure the podcast is conversational, insightful, and actionable:
 
-1.  **[Introduction]**:
-    *   Start exactly with "Host1: Welcome to Next Quarter's ABM summary on {account_name}'s key personas, prepared exclusively for {client_name}."
-    *   Provide a concise outline of the episode's key areas: a persona overview, initiative alignment, and Account-Based Marketing channel strategies. Emphasize how understanding these elements can drive more effective engagement.
-    *   Let Host1 take the lead in setting the tone and starting the introduction, followed by Host2.
+1. **[Introduction]**:
+   * Start exactly with "Host1: Welcome to Next Quarter's ABM summary on {account_name}'s key personas, prepared exclusively for {client_name}."
+   * Provide a concise outline of the episode's key areas: top ABM strategies, persona overview with themes and initiatives, and Account-Based Marketing channel strategies. Emphasize how understanding these elements can drive more effective engagement.
+   * Let Host1 take the lead in setting the tone and starting the introduction, followed by Host2.
 
-2.  **[Persona Selection & Deep Dive]**:
-    *   Identify the total number of personas detailed in the provided document. State: "This report identifies X key personas at {account_name}. We'll focus on a select few of the most strategically impactful."
-    *   **[Selection Criteria]:** Explain that personas were chosen based on their influence over key strategic initiatives and their relevance to {client_name}'s offerings. Aim to select 3-4 personas.
-    *   For each selected persona:
-        *   **[Persona Summary]**:
-            *   Clearly state the persona's name and job title. Provide a concise summary of their core responsibilities, key objectives, and overall influence within {account_name}. Focus on aspects that are most relevant to {client_name} (approximately 60 words).
-        *   **[Initiatives and {client_name} Alignment]**:
-            *   Prioritize the 2-3 most relevant initiatives from the document, focusing on initiatives that directly align with {client_name}'s offerings and areas of expertise.
-            *   For each initiative:
-                *   Summarize the initiative, emphasizing its importance to the persona's goals and {account_name}'s broader strategic objectives (approximately 50 words).
-                *   Detail recommended alignment strategies. Provide specific, actionable steps that {client_name} can take to support the initiative and engage the persona. Focus on delivering tangible value (approximately 50 words).
-        *   **[ABM Channels]**:
-            *   Recommend the most effective ABM channels for engaging this persona. Justify these choices by explaining how the channels align with the persona's preferences and information consumption habits. Consider both digital and traditional channels (approximately 50 words).
-        *   Keep each persona discussion concise (approximately 220 words total per persona), while focusing on actionable insights.
-        *   Alternate between Host1 and Host2 for presenting each persona, creating a natural conversational flow.
+2. **[Top ABM Strategies]**:
+   * Summarize the top 3 recommendations from the "Potential ABM Strategies Based on Intelligence" section.
+   * For each strategy:
+     * Provide a brief overview of the strategy (approximately 50 words).
+     * Highlight key actions and targeted personas (approximately 50 words).
+     * Discuss the potential impact and alignment with {client_name}'s offerings (approximately 50 words).
 
-3.  **[Tone and Delivery]**:
-    *   Maintain an enthusiastic and conversational tone throughout the podcast.
-    *   Avoid overly long pauses and forced transitions.
-    *   Encourage natural reactions and lighthearted back-and-forth dialogue when appropriate, but keep it professional.
-    *   Maintain smooth transitions by allowing one host to lead entire sections instead of frequent back-and-forth exchanges.
+3. **[Persona Deep Dive]**:
+   * Reference the "Persona Based Overlap of Themes and Initiatives" and "Channel Prediction for ABM to Identified Personas" sections.
+   * Merge the information from these tables to create a comprehensive view of each persona.
+   * Identify the top 4 personas based on strategic importance and relevance to {client_name}.
+   * For each selected persona:
+     * **[Persona Summary]**:
+       * Clearly state the persona's name and job title. Provide a concise summary of their core responsibilities and overall influence within {account_name} (approximately 60 words).
+     * **[Themes and Initiatives]**:
+       * Summarize the key themes and initiatives associated with this persona, focusing on those most relevant to {client_name}'s offerings (approximately 100 words).
+     * **[ABM Channels]**:
+       * Detail the recommended ABM channels for engaging this persona. Explain how these channels align with the persona's preferences and information consumption habits (approximately 60 words).
+   * Keep each persona discussion concise (approximately 220 words total per persona), while focusing on actionable insights.
+   * Alternate between Host1 and Host2 for presenting each persona, creating a natural conversational flow.
 
-4.  **[Structure]**:
-    *   Conclude with a summary of key takeaways, reinforcing the importance of understanding these personas and aligning with their initiatives. Include a clear and motivational call to action, encouraging listeners to take concrete steps to engage these individuals.
-    *   End with: "You can always find more details about {account_name}'s key influencers in the full intelligence report provided by Next Quarter."
-    *   Ensure the entire script is substantial and well-developed. The target length is 900-1100 words to provide sufficient depth and coverage.
+4. **[Tone and Delivery]**:
+   * Maintain an enthusiastic and conversational tone throughout the podcast.
+   * Avoid overly long pauses and forced transitions.
+   * Encourage natural reactions and lighthearted back-and-forth dialogue when appropriate, but keep it professional.
+   * Maintain smooth transitions by allowing one host to lead entire sections instead of frequent back-and-forth exchanges.
 
-5.  **[Dialogue Style]**:
-    *   Use an alternating dialogue format between Host1 and Host2:
-        *   Host1: \[Host1's dialogue]
-        *   Host2: \[Host2's dialogue]
-        *   Continue this pattern throughout the script, with one host leading each section for better flow.
-    *   Don't explicitly name the hosts within their dialogue or anywhere in the script; instead, focus on natural conversational phrasing.
+5. **[Structure]**:
+   * Conclude with a summary of key takeaways, reinforcing the importance of understanding these personas, aligning with their initiatives, and leveraging appropriate ABM channels. Include a clear and motivational call to action, encouraging listeners to take concrete steps to engage these individuals.
+   * End with: "You can always find more details about {account_name}'s key influencers in the full intelligence report provided by Next Quarter."
+   * Ensure the entire script is substantial and well-developed. The target length is 900-1100 words to provide sufficient depth and coverage.
 
-6.  **[Strategic Focus (TED Talk Style)]**:
-    *   Emulate a TED Talk by clearly outlining key points at the beginning, delving into each persona with engaging, story-driven insights, and concluding with an inspiring and actionable summary.
-    *   Use compelling examples and narratives to keep listeners engaged while conveying actionable insights about influencing these personas and driving meaningful engagement.
+6. **[Dialogue Style]**:
+   * Use an alternating dialogue format between Host1 and Host2:
+     * Host1: [Host1's dialogue]
+     * Host2: [Host2's dialogue]
+     * Continue this pattern throughout the script, with one host leading each section for better flow.
+   * Don't explicitly name the hosts within their dialogue or anywhere in the script; instead, focus on natural conversational phrasing.
 
-By following these guidelines, create a compelling podcast script that is informative, motivating, and captivates listeners while effectively addressing strategic priorities. Focus on providing actionable advice for engaging key personas to drive results for {client_name}.
+7. **[Strategic Focus (TED Talk Style)]**:
+   * Emulate a TED Talk by clearly outlining key points at the beginning, delving into each strategy and persona with engaging, story-driven insights, and concluding with an inspiring and actionable summary.
+   * Use compelling examples and narratives to keep listeners engaged while conveying actionable insights about influencing these personas and driving meaningful engagement through appropriate ABM channels.
+
+By following these guidelines, create a compelling podcast script that is informative, motivating, and captivates listeners while effectively addressing strategic priorities. Focus on providing actionable advice for engaging key personas through targeted ABM strategies and channels to drive results for {client_name}.
 
 Script:
 """
-
 
     try:
         response = client.chat.completions.create(
