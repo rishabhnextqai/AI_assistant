@@ -103,7 +103,7 @@ def generate_suggested_questions(content):
         Based on the following content, generate 3-5 contextually relevant questions that a user might ask:
 
         Content:
-        {content[:2000]}  # Limit content to first 2000 characters
+        {content}  # Limit content to first 2000 characters
 
         Generate questions:
         """
