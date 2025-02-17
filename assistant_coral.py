@@ -605,115 +605,6 @@ Script:
         return f"Error: Unable to generate script. Please try again or contact support."
     
 def generate_podcast_script_ABM(file_contents: str, account_name, client_name) -> str:
-#     prompt = f"""
-# Create a dynamic and engaging podcast script for "Next Quarter's ABM Deep Dive" featuring two hosts, Host1 and Host2. The podcast should focus on the top 4 key personas for {account_name}, using the provided content as the foundation:
-
-# {file_contents}
-
-# Follow these detailed guidelines to ensure the podcast is conversational, insightful, and actionable:
-
-# 1.  **Introduction**:
-#     *   Start exactly with "Host1: Welcome to Next Quarter's ABM summary on {account_name}'s key personas, prepared exclusively for {client_name}."
-#     *   Provide an outline of what will be covered in the episode to help listeners follow along, emphasizing the focus on personas, initiatives, alignment, and ABM channels.
-#     *   Let Host1 take the lead in setting the tone and starting the introduction followed by Host2.
-
-# 2.  **Top 4 Personas Deep Dive**:
-#     *   Count the total number of personas mentioned in the content and state: "Out of X key personas, we are focusing on the top 4 that drive strategic decisions at {account_name}."
-#     *   For each of these top 4 personas:
-#         *   **Persona Summary**:
-#             *   Tell the name of the persona and briefly summarize the persona's role, responsibilities, and influence within {account_name} in an engaging way (approximately 50 words).
-#         *   **Initiatives and {client_name} Alignment**:
-#             *   Select the top 2-3 initiatives most relevant to the persona from the provided content.
-#             *   For each initiative:
-#                 *   Summarize the initiative's context or importance to the persona (approximately 40 words).
-#                 *   Discuss recommended alignment with practical, actionable suggestions for {client_name} (approximately 40 words).
-#         *   **ABM Channels**:
-#             *   Based on the content, identify and discuss the most effective ABM channels to reach and engage this persona (approximately 40 words). Explain why these channels are particularly suitable.
-#         *   Keep each persona discussion concise (approximately 200 words total per persona) while ensuring clarity and depth.
-#         *   Alternate between Host1 and Host2 for presenting each persona to create a natural flow.
-
-# 3.  **Tone and Delivery**:
-#     *   Maintain an enthusiastic and conversational tone throughout.
-#     *   Avoid overly long pauses and don't include forced transitions like "oh great" or "absolutely."
-#     *   Allow natural reactions between hosts but avoid making them feel scripted or excessive.
-#     *   Keep transitions smooth by letting one host lead entire sections instead of frequent back-and-forth exchanges.
-
-# 4.  **Structure**:
-#     *   Conclude with a summary of key takeaways and a motivational call-to-action for listeners to drive engagement with these key personas.
-#     *   End with: "You can always find more details about {account_name}'s key influencers in the full intelligence report provided by Next Quarter."
-#     *   Ensure the entire script exceeds 950 words for depth and coverage.
-
-# 5.  **Dialogue Style**:
-#     *   Use alternating dialogue format between Host1 and Host2:
-#         *   Host1: \[Host1's dialogue]
-#         *   Host2: \[Host2's dialogue]
-#         *   Continue this pattern throughout the script, with one host leading each section for better flow.
-#     *   Don't name the hosts within their dialogue or anywhere in the script; instead, focus on natural conversational phrasing.
-#     *   Encourage lighthearted yet professional back-and-forth dialogue when appropriate.
-
-# 6.  **TED Talk-Style Approach**:
-#     *   Structure the podcast like a TED Talk by clearly outlining key points at the start, diving into each topic with engaging storytelling, and wrapping up with an inspiring conclusion.
-#     *   Use compelling examples and narratives to keep listeners engaged while conveying actionable insights about influencing these personas.
-
-# By following these guidelines, craft a compelling podcast script that informs, motivates, and captivates listeners while addressing strategic priorities effectively by focusing on the top 4 key personas.
-
-# Script:
-# """
-
-#     prompt = f"""
-# Create a dynamic and engaging podcast script for "Next Quarter's ABM Deep Dive" featuring two hosts, Host1 and Host2. The podcast should focus on strategically important personas for {account_name}, using the provided content as the foundation:
-
-# {file_contents}
-
-# Follow these detailed guidelines to ensure the podcast is conversational, insightful, and actionable:
-
-# 1.  **[Introduction]**:
-#     *   Start exactly with "Host1: Welcome to Next Quarter's ABM summary on {account_name}'s key personas, prepared exclusively for {client_name}."
-#     *   Provide a concise outline of the episode's key areas: a persona overview, initiative alignment, and Account-Based Marketing channel strategies. Emphasize how understanding these elements can drive more effective engagement.
-#     *   Let Host1 take the lead in setting the tone and starting the introduction, followed by Host2.
-
-# 2.  **[Persona Selection & Deep Dive]**:
-#     *   Identify the total number of personas detailed in the provided document. State: "This report identifies X key personas at {account_name}. We'll focus on a select few of the most strategically impactful."
-#     *   **[Selection Criteria]:** Explain that personas were chosen based on their influence over key strategic initiatives and their relevance to {client_name}'s offerings. Aim to select 3-4 personas.
-#     *   For each selected persona:
-#         *   **[Persona Summary]**:
-#             *   Clearly state the persona's name and job title. Provide a concise summary of their core responsibilities, key objectives, and overall influence within {account_name}. Focus on aspects that are most relevant to {client_name} (approximately 60 words).
-#         *   **[Initiatives and {client_name} Alignment]**:
-#             *   Prioritize the 2-3 most relevant initiatives from the document, focusing on initiatives that directly align with {client_name}'s offerings and areas of expertise.
-#             *   For each initiative:
-#                 *   Summarize the initiative, emphasizing its importance to the persona's goals and {account_name}'s broader strategic objectives (approximately 50 words).
-#                 *   Detail recommended alignment strategies. Provide specific, actionable steps that {client_name} can take to support the initiative and engage the persona. Focus on delivering tangible value (approximately 50 words).
-#         *   **[ABM Channels]**:
-#             *   Recommend the most effective ABM channels for engaging this persona. Justify these choices by explaining how the channels align with the persona's preferences and information consumption habits. Consider both digital and traditional channels (approximately 50 words).
-#         *   Keep each persona discussion concise (approximately 220 words total per persona), while focusing on actionable insights.
-#         *   Alternate between Host1 and Host2 for presenting each persona, creating a natural conversational flow.
-
-# 3.  **[Tone and Delivery]**:
-#     *   Maintain an enthusiastic and conversational tone throughout the podcast.
-#     *   Avoid overly long pauses and forced transitions.
-#     *   Encourage natural reactions and lighthearted back-and-forth dialogue when appropriate, but keep it professional.
-#     *   Maintain smooth transitions by allowing one host to lead entire sections instead of frequent back-and-forth exchanges.
-
-# 4.  **[Structure]**:
-#     *   Conclude with a summary of key takeaways, reinforcing the importance of understanding these personas and aligning with their initiatives. Include a clear and motivational call to action, encouraging listeners to take concrete steps to engage these individuals.
-#     *   End with: "You can always find more details about {account_name}'s key influencers in the full intelligence report provided by Next Quarter."
-#     *   Ensure the entire script is substantial and well-developed. The target length is 900-1100 words to provide sufficient depth and coverage.
-
-# 5.  **[Dialogue Style]**:
-#     *   Use an alternating dialogue format between Host1 and Host2:
-#         *   Host1: \[Host1's dialogue]
-#         *   Host2: \[Host2's dialogue]
-#         *   Continue this pattern throughout the script, with one host leading each section for better flow.
-#     *   Don't explicitly name the hosts within their dialogue or anywhere in the script; instead, focus on natural conversational phrasing.
-
-# 6.  **[Strategic Focus (TED Talk Style)]**:
-#     *   Emulate a TED Talk by clearly outlining key points at the beginning, delving into each persona with engaging, story-driven insights, and concluding with an inspiring and actionable summary.
-#     *   Use compelling examples and narratives to keep listeners engaged while conveying actionable insights about influencing these personas and driving meaningful engagement.
-
-# By following these guidelines, create a compelling podcast script that is informative, motivating, and captivates listeners while effectively addressing strategic priorities. Focus on providing actionable advice for engaging key personas to drive results for {client_name}.
-
-# Script:
-# """
     prompt = f""" Create a dynamic and engaging podcast script for "Next Quarter's ABM Deep Dive" featuring two hosts, Host1 and Host2. The podcast should focus on strategically important personas for {account_name}, using the provided content as the foundation:
 
 {file_contents}
@@ -995,7 +886,7 @@ def main():
                                             st.download_button(
                                                 label="Download Executive Summary Briefing",
                                                 data=audio_buffer.getvalue(),
-                                                file_name="executive_briefing.mp3",
+                                                file_name=f"{account_name}_executive_briefing_for_{client_name}.mp3",
                                                 mime="audio/mpeg"
                                             )
                                         except Exception as e:
@@ -1015,7 +906,7 @@ def main():
                                             st.download_button(
                                                 label="Download Business Overview Briefing",
                                                 data=audio_buffer.getvalue(),
-                                                file_name="businessoverview_briefing.mp3",
+                                                file_name=f"{account_name}_businessoverview_briefing_for_{client_name}.mp3",
                                                 mime="audio/mpeg"
                                             )
                                         except Exception as e:
@@ -1035,7 +926,7 @@ def main():
                                             st.download_button(
                                                 label="Download Competitiors Briefing",
                                                 data=audio_buffer.getvalue(),
-                                                file_name="competitors_briefing.mp3",
+                                                file_name=f"{account_name}_competitors_briefing_for_{client_name}.mp3",
                                                 mime="audio/mpeg"
                                             )
                                         except Exception as e:
@@ -1055,7 +946,7 @@ def main():
                                             st.download_button(
                                                 label="Download Stakeholders Briefings",
                                                 data=audio_buffer.getvalue(),
-                                                file_name="stakeholders_briefing.mp3",
+                                                file_name=f"{account_name}_stakeholders_briefing_for_{client_name}.mp3",
                                                 mime="audio/mpeg"
                                             )
                                         except Exception as e:
@@ -1075,25 +966,25 @@ def main():
                                                     with io.BytesIO() as audio_buffer:
                                                         podcast_audio_stakeholders.export(audio_buffer, format="mp3")
                                                         audio_buffer.seek(0)
-                                                        zip_file.writestr("stakeholders_briefing.mp3", audio_buffer.read())
+                                                        zip_file.writestr(f"{account_name}_stakeholders_briefing_for_{client_name}.mp3", audio_buffer.read())
                                                 
                                                 if podcast_audio_competitors:
                                                     with io.BytesIO() as audio_buffer:
                                                         podcast_audio_competitors.export(audio_buffer, format="mp3")
                                                         audio_buffer.seek(0)
-                                                        zip_file.writestr("competitors_briefing.mp3", audio_buffer.read())
+                                                        zip_file.writestr(f"{account_name}_competitors_briefing_for_{client_name}.mp3", audio_buffer.read())
                                                 
                                                 if podcast_audio_businessoverview:
                                                     with io.BytesIO() as audio_buffer:
                                                         podcast_audio_businessoverview.export(audio_buffer, format="mp3")
                                                         audio_buffer.seek(0)
-                                                        zip_file.writestr("businessoverview_briefing.mp3", audio_buffer.read())
+                                                        zip_file.writestr(f"{account_name}_businessoverview_briefing_for_{client_name}.mp3", audio_buffer.read())
                                                 
                                                 if podcast_audio:
                                                     with io.BytesIO() as audio_buffer:
                                                         podcast_audio.export(audio_buffer, format="mp3")
                                                         audio_buffer.seek(0)
-                                                        zip_file.writestr("executive_briefing.mp3", audio_buffer.read())
+                                                        zip_file.writestr(f"{account_name}_executive_briefing_for_{client_name}.mp3", audio_buffer.read())
                                             
                                             # Finalize the ZIP file
                                             zip_buffer.seek(0)
@@ -1102,7 +993,7 @@ def main():
                                             st.download_button(
                                                 label="Download All Briefings",
                                                 data=zip_buffer.getvalue(),
-                                                file_name="all_briefings.zip",
+                                                file_name=f"{account_name}_all_briefings_for_{client_name}.zip",
                                                 mime="application/zip"
                                             )
                                     except Exception as e:
@@ -1141,7 +1032,7 @@ def main():
                                             st.download_button(
                                                 label="Download ABM Briefing",
                                                 data=audio_buffer.getvalue(),
-                                                file_name="abm_briefing.mp3",
+                                                file_name=f"{account_name}_abm_briefing_for_{client_name}.mp3",
                                                 mime="audio/mpeg"
                                             )
                                         except Exception as e:
@@ -1156,147 +1047,10 @@ def main():
                             script_competitors = None
                             script_stakeholders = None
                         
-                    # if script and script.startswith("Error:"):
-                    #     st.error(script)
-                    # elif script:
-                    #     st.subheader("Generated Transcript")
-                    #     st.text_area("Transcript", script, height=300)
-
-                    #     with st.spinner("Creating briefing audio..."):
-                    #         try:
-                    #             podcast_audio = create_podcast(script)
-                    #         except Exception as e:
-                    #             st.error("An error occurred while creating the briefing. Please try again or contact support.")
-                    #             logger.error(f"Briefing creation error: {str(e)}")
-                    #             podcast_audio = None
-
-                    #     if podcast_audio:
-                    #         st.subheader("Generated Audio Briefing")
-                    #         with io.BytesIO() as audio_buffer:
-                    #             try:
-                    #                 podcast_audio.export(audio_buffer, format="mp3")
-                    #                 audio_buffer.seek(0)
-                    #                 st.audio(audio_buffer, format="audio/mp3")
-
-                    #                 st.download_button(
-                    #                     label="Download Briefing",
-                    #                     data=audio_buffer.getvalue(),
-                    #                     file_name="briefing.mp3",
-                    #                     mime="audio/mpeg"
-                    #                 )
-                    #             except Exception as e:
-                    #                 st.error("Error exporting audio. Please try again or contact support.")
-                    #                 logger.error(f"Audio export error: {str(e)}")
-                    #     else:
-                    #         st.error("Failed to generate briefing audio. Please try again or contact support.")
-                    # else:
-                    #     st.warning("No script was generated due to an unsupported filename format or an error.")
-
-                    # if script_businessoverview:
-                    #     st.subheader("Generated Transcript Businness Overview")
-                    #     st.text_area("Transcript", script_businessoverview, height=300)
-
-                    #     with st.spinner("Creating briefing audio..."):
-                    #         try:
-                    #             podcast_audio_businessoverview = create_podcast(script_businessoverview)
-                    #         except Exception as e:
-                    #             st.error("An error occurred while creating the briefing. Please try again or contact support.")
-                    #             logger.error(f"Briefing creation error: {str(e)}")
-                    #             podcast_audio_businessoverview = None
-
-                    #     if podcast_audio_businessoverview:
-                    #         st.subheader("Generated Audio Briefing")
-                    #         with io.BytesIO() as audio_buffer:
-                    #             try:
-                    #                 podcast_audio_businessoverview.export(audio_buffer, format="mp3")
-                    #                 audio_buffer.seek(0)
-                    #                 st.audio(audio_buffer, format="audio/mp3")
-
-                    #                 st.download_button(
-                    #                     label="Download Business Overview Briefing",
-                    #                     data=audio_buffer.getvalue(),
-                    #                     file_name="business_overview_briefing.mp3",
-                    #                     mime="audio/mpeg"
-                    #                 )
-                    #             except Exception as e:
-                    #                 st.error("Error exporting audio. Please try again or contact support.")
-                    #                 logger.error(f"Audio export error: {str(e)}")
-                    #     else:
-                    #         st.error("Failed to generate briefing audio. Please try again or contact support.")
-
-                    # if script_competitors:
-                    #     st.subheader("Generated Transcript Competitors")
-                    #     st.text_area("Transcript", script_competitors, height=300)
-
-                    #     with st.spinner("Creating briefing audio..."):
-                    #         try:
-                    #             podcast_audio_competitors = create_podcast(script_competitors)
-                    #         except Exception as e:
-                    #             st.error("An error occurred while creating the briefing. Please try again or contact support.")
-                    #             logger.error(f"Briefing creation error: {str(e)}")
-                    #             podcast_audio_competitors = None
-
-                    #     if podcast_audio_competitors:
-                    #         st.subheader("Generated Audio Briefing")
-                    #         with io.BytesIO() as audio_buffer:
-                    #             try:
-                    #                 podcast_audio_competitors.export(audio_buffer, format="mp3")
-                    #                 audio_buffer.seek(0)
-                    #                 st.audio(audio_buffer, format="audio/mp3")
-
-                    #                 st.download_button(
-                    #                     label="Download Competitors Briefing",
-                    #                     data=audio_buffer.getvalue(),
-                    #                     file_name="competitors_briefing.mp3",
-                    #                     mime="audio/mpeg"
-                    #                 )
-                    #             except Exception as e:
-                    #                 st.error("Error exporting audio. Please try again or contact support.")
-                    #                 logger.error(f"Audio export error: {str(e)}")
-                    #     else:
-                    #         st.error("Failed to generate briefing audio. Please try again or contact support.")
-
-                    # if script_stakeholders:
-                    #     st.subheader("Generated Transcript Stakeholders")
-                    #     st.text_area("Transcript", script_stakeholders, height=300)
-
-                    #     with st.spinner("Creating briefing audio..."):
-                    #         try:
-                    #             podcast_audio_stakeholders = create_podcast(script_stakeholders)
-                    #         except Exception as e:
-                    #             st.error("An error occurred while creating the briefing. Please try again or contact support.")
-                    #             logger.error(f"Briefing creation error: {str(e)}")
-                    #             podcast_audio_stakeholders = None
-
-                    #     if podcast_audio_stakeholders:
-                    #         st.subheader("Generated Audio Briefing")
-                    #         with io.BytesIO() as audio_buffer:
-                    #             try:
-                    #                 podcast_audio_stakeholders.export(audio_buffer, format="mp3")
-                    #                 audio_buffer.seek(0)
-                    #                 st.audio(audio_buffer, format="audio/mp3")
-
-                    #                 st.download_button(
-                    #                     label="Download Stakeholders Briefing",
-                    #                     data=audio_buffer.getvalue(),
-                    #                     file_name="stakeholders_briefing.mp3",
-                    #                     mime="audio/mpeg"
-                    #                 )
-                    #             except Exception as e:
-                    #                 st.error("Error exporting audio. Please try again or contact support.")
-                    #                 logger.error(f"Audio export error: {str(e)}")
-                    #     else:
-                    #         st.error("Failed to generate briefing audio. Please try again or contact support.")
+                    
 
     st.markdown("---")
     st.markdown("Created by NextQAI")
                     
 if __name__ == "__main__":
     main()
-
-
-#     st.markdown("---")
-#     st.markdown("Created by NextQAI")
-
-# if __name__ == "__main__":
-#     main()
