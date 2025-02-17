@@ -321,46 +321,42 @@ Create a dynamic and engaging TED Talk script for "Next Quarter's Executive Brie
 
 Follow these detailed guidelines to ensure the talk is conversational, insightful, and actionable:
 
-1. **[Introduction]**:
+1. Introduction:
    - Start exactly with "Welcome to Next Quarter's briefing on {account_name}, prepared exclusively for {client_name}."
    - Provide an outline of what will be covered in the talk to help listeners follow along.
    - Set the tone and start the introduction with an engaging opening statement.
 
-2. **[First 4 Initiatives]**:
+2. First 4 Initiatives:
    - Count the total number of initiatives mentioned in the content and state: "Out of X initiatives, we are focusing on the top 4."
    - For each of these first four initiatives:
      - Summarize its context or importance to the client in an engaging way.
      - Discuss recommended alignment with practical, actionable suggestions.
      - Highlight one relevant case study that demonstrates success and aligns with the initiative.
-     - Keep each initiative discussion concise (approximately 130 words) while ensuring clarity and depth.
+     - Keep each initiative discussion concise while ensuring clarity and depth.
    - Present each initiative in a natural flow without alternating speakers.
 
-3. **[Other Sections]**:
+3. Other Sections:
    - Summarize content from other sections (apart from initiatives) from a sales executive's perspective.
    - Focus on actionable insights or opportunities for selling into the account.
    - Use storytelling techniques to naturally connect ideas, incorporating relevant sales and marketing buzzwords.
    - Present these sections without alternating speakers.
 
-4. **[Tone and Delivery]**:
+4. Tone and Delivery:
    - Maintain an enthusiastic and conversational tone throughout.
    - Maitain a natural pace.
    - Avoid overly long pauses and don't include forced transitions like "oh great" or "absolutely."
    - Allow for natural reactions but avoid making them feel scripted or excessive.
    - Keep transitions smooth by leading entire sections without frequent back-and-forth exchanges.
 
-5. **[Structure]**:
+5. Structure:
    - Conclude with a summary of key takeaways and a motivational call-to-action for listeners to drive engagement.
    - End with: "You can always find more details about {account_name} in the full intelligence report provided by Next Quarter."
-   - Ensure the entire script exceeds 1000 words for depth and coverage.
 
-6. **[Dialogue Style]**:
-   - Use a single speaker format:
-     - Host1: [Host1's dialogue]
-     - Continue this pattern throughout the script, leading each section for better flow.
+6. Dialogue Style:
    - Focus on natural conversational phrasing without naming the speaker.
    - Encourage lighthearted yet professional dialogue when appropriate.
 
-7. **[TED Talk-Style Approach]**:
+7. TED Talk-Style Approach:
    - Structure the talk like a TED Talk by clearly outlining key points at the start, diving into each topic with engaging storytelling, and wrapping up with an inspiring conclusion.
    - Use compelling examples and narratives to keep listeners engaged while conveying actionable insights.
 
@@ -368,7 +364,62 @@ By following these guidelines, craft a compelling TED Talk script that informs, 
 
 Script:
 """
+        
+# prompt = f"""
+# Create a dynamic and engaging TED Talk script for "Next Quarter's Executive Briefing" featuring a single speaker. The talk should focus on strategic priorities and key initiatives for {account_name}, using the provided content as the foundation:
 
+# {file_contents}
+
+# Follow these detailed guidelines to ensure the talk is conversational, insightful, and actionable:
+
+# 1. Introduction:
+#    - Start exactly with "Welcome to Next Quarter's briefing on {account_name}, prepared exclusively for {client_name}."
+#    - Provide an outline of what will be covered in the talk to help listeners follow along.
+#    - Set the tone and start the introduction with an engaging opening statement.
+
+# 2. First 4 Initiatives:
+#    - Count the total number of initiatives mentioned in the content and state: "Out of X initiatives, we are focusing on the top 4."
+#    - For each of these first four initiatives:
+#      - Summarize its context or importance to the client in an engaging way.
+#      - Discuss recommended alignment with practical, actionable suggestions.
+#      - Highlight one relevant case study that demonstrates success and aligns with the initiative.
+#      - Keep each initiative discussion concise (approximately 130 words) while ensuring clarity and depth.
+#    - Present each initiative in a natural flow without alternating speakers.
+
+# 3. Other Sections:
+#    - Summarize content from other sections (apart from initiatives) from a sales executive's perspective.
+#    - Focus on actionable insights or opportunities for selling into the account.
+#    - Use storytelling techniques to naturally connect ideas, incorporating relevant sales and marketing buzzwords.
+#    - Present these sections without alternating speakers.
+
+# 4. Tone and Delivery:
+#    - Maintain an enthusiastic and conversational tone throughout.
+#    - Maitain a natural pace.
+#    - Avoid overly long pauses and don't include forced transitions like "oh great" or "absolutely."
+#    - Allow for natural reactions but avoid making them feel scripted or excessive.
+#    - Keep transitions smooth by leading entire sections without frequent back-and-forth exchanges.
+
+# 5. Structure:
+#    - Conclude with a summary of key takeaways and a motivational call-to-action for listeners to drive engagement.
+#    - End with: "You can always find more details about {account_name} in the full intelligence report provided by Next Quarter."
+#    - Ensure the entire script exceeds 1000 words for depth and coverage.
+
+# 6. Dialogue Style:
+#    - Focus on natural conversational phrasing without naming the speaker.
+#    - Encourage lighthearted yet professional dialogue when appropriate.
+
+# 7. TED Talk-Style Approach:
+#    - Structure the talk like a TED Talk by clearly outlining key points at the start, diving into each topic with engaging storytelling, and wrapping up with an inspiring conclusion.
+#    - Use compelling examples and narratives to keep listeners engaged while conveying actionable insights.
+
+# By following these guidelines, craft a compelling TED Talk script that informs, motivates, and captivates listeners while addressing strategic priorities effectively.
+
+# Script:
+# """
+        
+#    - Use this dialogue format for every dialogue of Host:
+#      - Host: [Host's dialogue]
+#      - Continue this pattern throughout the script, leading each section for better flow.
 
 
 
@@ -383,54 +434,48 @@ Continue the "Next Quarter's Executive Briefing" TED Talk, focusing on the Busin
 
 Follow these detailed guidelines to ensure a seamless, engaging, and insightful continuation of the talk:
 
-1. **[Transition]**:
+1. Transition:
    - Begin with a smooth transition from the previous segment about initiatives.
    - Provide a brief outline of what will be covered in this segment (Business Overview, SWOT Analysis, Roadmap Commentary, Market and Industry Trends).
 
-2. **[SWOT Analysis]**:
+2. SWOT Analysis:
    - Highlight one key strength and one significant weakness from the SWOT analysis:
      - Provide real-world examples or context for each point to make them relatable.
      - Discuss their impact on business strategy or operations in practical terms.
    - Present both the strength and weakness in a natural flow without alternating speakers.
 
-3. **[Roadmap Commentary]**:
+3. Roadmap Commentary:
    - Offer concise insights into the current and future roadmap:
      - Mention key milestones or goals that stand out.
      - Explain how the roadmap addresses both the highlighted strength and weakness effectively.
    - Present this section as part of the overall narrative.
 
-4. **[Market Trend]**:
+4. Market Trend:
    - Identify one relevant market trend:
      - Discuss its potential impact on business strategy.
      - Suggest actionable ways the company could leverage this trend to its advantage.
    - Integrate this section smoothly into the talk.
 
-5. **[Industry Trend]**:
+5. Industry Trend:
    - Highlight one significant industry trend:
      - Analyze its implications for competitors and overall market dynamics.
      - Propose strategies for addressing this trend to maintain a competitive edge.
    - Present this section as a continuation of the market trend discussion.
 
-6. **[Tone and Storytelling]**:
+6. Tone and Storytelling:
    - Use storytelling techniques to dynamically connect insights and ideas, keeping the dialogue natural and engaging.
    - Maintain an upbeat tone while focusing on smooth, natural phrasing.
    - Avoid overly long pauses or forced transitions like "oh great" or "absolutely."
 
-7. **[Conclusion]**:
+7. Conclusion:
    - Summarize key points discussed in this segment concisely.
    - End with a teaser for the upcoming Competitors' section to keep listeners intrigued.
 
-8. **[Length]**:
-   - Keep this segment concise, approximately 500 words, while ensuring depth and clarity.
-
-9. **[Dialogue Style]**:
-   - Use a single speaker format:
-     - Host1: [Host1's dialogue]
-     - Continue this pattern throughout the script, leading each section for better flow.
+8. Dialogue Style:
    - Focus on natural conversational phrasing without naming the speaker.
    - Encourage lighthearted yet professional dialogue when appropriate.
 
-10. **[TED Talk-Style Approach]**:
+9. TED Talk-Style Approach:
     - Structure this segment like a TED Talk by clearly outlining key points at the start, diving into each topic with engaging storytelling, and wrapping up with an inspiring conclusion.
     - Use compelling examples and narratives to keep listeners engaged while conveying actionable insights.
 
@@ -438,6 +483,72 @@ By following these updated guidelines, craft a concise yet impactful TED Talk se
 
 Script:
 """
+        
+
+# prompt = f"""
+# Continue the "Next Quarter's Executive Briefing" TED Talk, focusing on the Business Overview and SWOT analysis based on the provided content:
+
+# {file_contents}
+
+# Follow these detailed guidelines to ensure a seamless, engaging, and insightful continuation of the talk:
+
+# 1. Transition:
+#    - Begin with a smooth transition from the previous segment about initiatives.
+#    - Provide a brief outline of what will be covered in this segment (Business Overview, SWOT Analysis, Roadmap Commentary, Market and Industry Trends).
+
+# 2. SWOT Analysis:
+#    - Highlight one key strength and one significant weakness from the SWOT analysis:
+#      - Provide real-world examples or context for each point to make them relatable.
+#      - Discuss their impact on business strategy or operations in practical terms.
+#    - Present both the strength and weakness in a natural flow without alternating speakers.
+
+# 3. Roadmap Commentary:
+#    - Offer concise insights into the current and future roadmap:
+#      - Mention key milestones or goals that stand out.
+#      - Explain how the roadmap addresses both the highlighted strength and weakness effectively.
+#    - Present this section as part of the overall narrative.
+
+# 4. Market Trend:
+#    - Identify one relevant market trend:
+#      - Discuss its potential impact on business strategy.
+#      - Suggest actionable ways the company could leverage this trend to its advantage.
+#    - Integrate this section smoothly into the talk.
+
+# 5. Industry Trend:
+#    - Highlight one significant industry trend:
+#      - Analyze its implications for competitors and overall market dynamics.
+#      - Propose strategies for addressing this trend to maintain a competitive edge.
+#    - Present this section as a continuation of the market trend discussion.
+
+# 6. Tone and Storytelling:
+#    - Use storytelling techniques to dynamically connect insights and ideas, keeping the dialogue natural and engaging.
+#    - Maintain an upbeat tone while focusing on smooth, natural phrasing.
+#    - Avoid overly long pauses or forced transitions like "oh great" or "absolutely."
+
+# 7. Conclusion:
+#    - Summarize key points discussed in this segment concisely.
+#    - End with a teaser for the upcoming Competitors' section to keep listeners intrigued.
+
+# 8. Length:
+#    - Keep this segment concise, approximately 500 words, while ensuring depth and clarity.
+
+# 9. Dialogue Style:
+#    - Focus on natural conversational phrasing without naming the speaker.
+#    - Encourage lighthearted yet professional dialogue when appropriate.
+
+# 10. TED Talk-Style Approach:
+#     - Structure this segment like a TED Talk by clearly outlining key points at the start, diving into each topic with engaging storytelling, and wrapping up with an inspiring conclusion.
+#     - Use compelling examples and narratives to keep listeners engaged while conveying actionable insights.
+
+# By following these updated guidelines, craft a concise yet impactful TED Talk segment that informs, engages, and transitions smoothly into the next topic.
+
+# Script:
+# """
+        
+
+    #        - Use this dialogue format for every dialogue of Host:
+    #  - Host: [Host's dialogue]
+    #  - Continue this pattern throughout the script, leading each section for better flow.
 
 
 
@@ -451,50 +562,47 @@ Continue the "Next Quarter's Executive Briefing" TED Talk, shifting the focus to
 
 Follow these detailed guidelines to ensure a seamless, engaging, and insightful continuation of the talk:
 
-1. **[Transition]**:
+1. Transition:
    - Begin with a smooth transition from the Business Overview segment.
    - Provide a brief outline of what will be covered in this segment (Competitor Analysis, Client Gaps, Detailed Competitor Spotlight, and Countermeasures) to help listeners follow along.
 
-2. **[Competitor Analysis]**:
+2. Competitor Analysis:
    - Discuss key competitors:
      - Provide an overview of their strengths relative to the client.
      - Use specific examples to illustrate competitive dynamics and market positioning.
    - Present this section as part of the overall narrative.
 
-3. **[Client Gaps]**:
+3. Client Gaps:
    - Identify two areas where the client is lagging behind competitors:
      - Analyze the implications of these gaps on market position or sales performance.
      - Suggest actionable strategies to address these weaknesses effectively.
    - Integrate this section smoothly into the talk.
 
-4. **[Detailed Competitor Spotlight]**:
+4. Detailed Competitor Spotlight:
    - Highlight one specific competitor in detail:
      - Discuss their unique sales tactics or strategies.
      - Analyze how these contribute to their success and differentiate them in the market.
    - Present this section as a continuation of the competitor analysis.
 
-5. **[Countermeasures]**:
+5. Countermeasures:
    - Present practical countermeasures for the client:
      - Suggest strategies that could bolster competitive positioning and mitigate risks effectively.
    - Integrate this section naturally into the narrative.
 
-6. **[Tone and Engagement]**:
+6. Tone and Engagement:
    - Maintain an engaging and conversational tone throughout, focusing on smooth, natural phrasing.
    - Avoid overly long pauses or forced transitions like "oh great" or "absolutely."
    - Use relevant buzzwords naturally within discussions to resonate with a professional audience.
 
-7. **[Conclusion]**:
+7. Conclusion:
    - Summarize key points discussed in this segment concisely.
    - End with a teaser for the upcoming Stakeholders' section to keep listeners intrigued.
 
-8. **[Dialogue Style]**:
-   - Use a single speaker format:
-     - Host1: [Host1's dialogue]
-     - Continue this pattern throughout the script, leading each section for better flow.
+8. Dialogue Style:
    - Focus on natural conversational phrasing without naming the speaker.
    - Encourage lighthearted yet professional dialogue when appropriate.
 
-9. **[TED Talk-Style Approach]**:
+9. TED Talk-Style Approach:
     - Structure this segment like a TED Talk by clearly outlining key points at the start, diving into each topic with engaging storytelling, and wrapping up with an inspiring conclusion.
     - Use compelling examples and narratives to keep listeners engaged while conveying actionable insights.
 
@@ -502,6 +610,63 @@ By following these updated guidelines, craft a concise yet impactful TED Talk se
 
 Script:
 """
+        
+
+# prompt = f"""
+# Continue the "Next Quarter's Executive Briefing" TED Talk, shifting the focus to Competitors based on the provided content:
+
+# {file_contents}
+
+# Follow these detailed guidelines to ensure a seamless, engaging, and insightful continuation of the talk:
+
+# 1. Transition:
+#    - Begin with a smooth transition from the Business Overview segment.
+#    - Provide a brief outline of what will be covered in this segment (Competitor Analysis, Client Gaps, Detailed Competitor Spotlight, and Countermeasures) to help listeners follow along.
+
+# 2. Competitor Analysis:
+#    - Discuss key competitors:
+#      - Provide an overview of their strengths relative to the client.
+#      - Use specific examples to illustrate competitive dynamics and market positioning.
+#    - Present this section as part of the overall narrative.
+
+# 3. Client Gaps:
+#    - Identify two areas where the client is lagging behind competitors:
+#      - Analyze the implications of these gaps on market position or sales performance.
+#      - Suggest actionable strategies to address these weaknesses effectively.
+#    - Integrate this section smoothly into the talk.
+
+# 4. Detailed Competitor Spotlight:
+#    - Highlight one specific competitor in detail:
+#      - Discuss their unique sales tactics or strategies.
+#      - Analyze how these contribute to their success and differentiate them in the market.
+#    - Present this section as a continuation of the competitor analysis.
+
+# 5. Countermeasures:
+#    - Present practical countermeasures for the client:
+#      - Suggest strategies that could bolster competitive positioning and mitigate risks effectively.
+#    - Integrate this section naturally into the narrative.
+
+# 6. Tone and Engagement:
+#    - Maintain an engaging and conversational tone throughout, focusing on smooth, natural phrasing.
+#    - Avoid overly long pauses or forced transitions like "oh great" or "absolutely."
+#    - Use relevant buzzwords naturally within discussions to resonate with a professional audience.
+
+# 7. Conclusion:
+#    - Summarize key points discussed in this segment concisely.
+#    - End with a teaser for the upcoming Stakeholders' section to keep listeners intrigued.
+
+# 8. Dialogue Style:
+#    - Focus on natural conversational phrasing without naming the speaker.
+#    - Encourage lighthearted yet professional dialogue when appropriate.
+
+# 9. TED Talk-Style Approach:
+#     - Structure this segment like a TED Talk by clearly outlining key points at the start, diving into each topic with engaging storytelling, and wrapping up with an inspiring conclusion.
+#     - Use compelling examples and narratives to keep listeners engaged while conveying actionable insights.
+
+# By following these updated guidelines, craft a concise yet impactful TED Talk segment that informs, engages, and transitions smoothly into the next topic.
+
+# Script:
+# """
 
 
 
@@ -515,18 +680,18 @@ Conclude the "Next Quarter's Executive Briefing" TED Talk by focusing on Key Sta
 
 Follow these detailed guidelines to craft a smooth, engaging, and impactful conclusion to the talk:
 
-1. **[Transition]**:
+1. Transition:
    - Begin with a seamless and engaging transition from the previous segment about Competitors.
    - Emphasize that this is the final and most critical piece of the briefing.
    - Provide a brief outline of what will be covered in this segment (Stakeholder Identification, Key Executives, Stakeholder Contributions, and Relationship Strategies).
 
-2. **[Stakeholder Identification]**:
+2. Stakeholder Identification:
    - Identify stakeholders frequently mentioned across initiatives:
      - Refer to Personas supporting these initiatives.
      - Explain why these stakeholders are crucial to multiple efforts and how they influence success.
    - Present this section as part of the overall narrative.
 
-3. **[Key Executives]**:
+3. Key Executives:
    - Select 3-5 key executives from the identified stakeholders and for each:
      - Highlight the specific initiatives they are focused on.
      - Provide a brief bio from the key contacts summary section, including:
@@ -535,43 +700,37 @@ Follow these detailed guidelines to craft a smooth, engaging, and impactful conc
        * How their background aligns with the initiatives they support.
    - Integrate this section smoothly into the talk.
 
-4. **[Stakeholder Contributions]**:
+4. Stakeholder Contributions:
    - Draw connections between stakeholders’ expertise and their contributions to initiatives:
      - Discuss how their unique skills drive success.
      - Highlight potential synergies between different stakeholders' efforts.
    - Present this section as a continuation of the key executives discussion.
 
-5. **[Relationship Strategies]**:
+5. Relationship Strategies:
    - Discuss strategies for building strong relationships with these key stakeholders:
      - Suggest practical engagement methods tailored to each stakeholder’s priorities.
      - Emphasize how strong relationships can directly impact initiative outcomes.
    - Integrate this section naturally into the narrative.
 
-6. **[Tone and Storytelling]**:
+6. Tone and Storytelling:
    - Incorporate relevant sales and marketing buzzwords naturally into the conversation while maintaining an upbeat tone.
    - Use storytelling techniques to make the discussion relatable and engaging, referencing real-world examples where appropriate.
 
-7. **[Conclusion of Segment]**:
+7. Conclusion of Segment:
    - Summarize key takeaways about stakeholders’ roles in driving initiatives:
      - Reinforce the importance of understanding their motivations and aligning strategies accordingly.
      - Provide a motivational call-to-action for listeners, encouraging them to leverage these insights in their own strategic planning.
 
-8. **[Talk Closing]**:
+8. Talk Closing:
    - End with a reflective closing statement:
      - Thank listeners for joining this deep dive into strategic priorities.
      - Encourage them to apply what they’ve learned to build stronger partnerships and achieve their goals.
 
-9. **[Length]**:
-   - Keep this segment concise yet impactful, approximately 400 words.
-
-10. **[Dialogue Style]**:
-    - Use a single speaker format:
-      - Host1: [Host1's dialogue]
-      - Continue this pattern throughout the script, leading each section for better flow.
+9. Dialogue Style:
     - Focus on natural conversational phrasing without naming the speaker.
     - Encourage lighthearted yet professional dialogue when appropriate.
 
-11. **[TED Talk-Style Approach]**:
+10. TED Talk-Style Approach:
     - Structure this segment like a TED Talk by clearly outlining key points at the start, diving into each topic with engaging storytelling, and wrapping up with an inspiring conclusion.
     - Use compelling examples and narratives to keep listeners engaged while conveying actionable insights.
 
@@ -579,6 +738,76 @@ By following these updated guidelines, craft a concise yet impactful TED Talk se
 
 Script:
 """
+        
+
+#         prompt = f"""
+# Conclude the "Next Quarter's Executive Briefing" TED Talk by focusing on Key Stakeholders based on the provided content:
+
+# {file_contents}
+
+# Follow these detailed guidelines to craft a smooth, engaging, and impactful conclusion to the talk:
+
+# 1. Transition:
+#    - Begin with a seamless and engaging transition from the previous segment about Competitors.
+#    - Emphasize that this is the final and most critical piece of the briefing.
+#    - Provide a brief outline of what will be covered in this segment (Stakeholder Identification, Key Executives, Stakeholder Contributions, and Relationship Strategies).
+
+# 2. Stakeholder Identification:
+#    - Identify stakeholders frequently mentioned across initiatives:
+#      - Refer to Personas supporting these initiatives.
+#      - Explain why these stakeholders are crucial to multiple efforts and how they influence success.
+#    - Present this section as part of the overall narrative.
+
+# 3. Key Executives:
+#    - Select 3-5 key executives from the identified stakeholders and for each:
+#      - Highlight the specific initiatives they are focused on.
+#      - Provide a brief bio from the key contacts summary section, including:
+#        * Their role and responsibilities.
+#        * Notable achievements or areas of expertise.
+#        * How their background aligns with the initiatives they support.
+#    - Integrate this section smoothly into the talk.
+
+# 4. Stakeholder Contributions:
+#    - Draw connections between stakeholders’ expertise and their contributions to initiatives:
+#      - Discuss how their unique skills drive success.
+#      - Highlight potential synergies between different stakeholders' efforts.
+#    - Present this section as a continuation of the key executives discussion.
+
+# 5. Relationship Strategies:
+#    - Discuss strategies for building strong relationships with these key stakeholders:
+#      - Suggest practical engagement methods tailored to each stakeholder’s priorities.
+#      - Emphasize how strong relationships can directly impact initiative outcomes.
+#    - Integrate this section naturally into the narrative.
+
+# 6. Tone and Storytelling:
+#    - Incorporate relevant sales and marketing buzzwords naturally into the conversation while maintaining an upbeat tone.
+#    - Use storytelling techniques to make the discussion relatable and engaging, referencing real-world examples where appropriate.
+
+# 7. Conclusion of Segment:
+#    - Summarize key takeaways about stakeholders’ roles in driving initiatives:
+#      - Reinforce the importance of understanding their motivations and aligning strategies accordingly.
+#      - Provide a motivational call-to-action for listeners, encouraging them to leverage these insights in their own strategic planning.
+
+# 8. Talk Closing:
+#    - End with a reflective closing statement:
+#      - Thank listeners for joining this deep dive into strategic priorities.
+#      - Encourage them to apply what they’ve learned to build stronger partnerships and achieve their goals.
+
+# 9. Length:
+#    - Keep this segment concise yet impactful, approximately 400 words.
+
+# 10. Dialogue Style:
+#     - Focus on natural conversational phrasing without naming the speaker.
+#     - Encourage lighthearted yet professional dialogue when appropriate.
+
+# 11. TED Talk-Style Approach:
+#     - Structure this segment like a TED Talk by clearly outlining key points at the start, diving into each topic with engaging storytelling, and wrapping up with an inspiring conclusion.
+#     - Use compelling examples and narratives to keep listeners engaged while conveying actionable insights.
+
+# By following these updated guidelines, craft a concise yet impactful TED Talk segment that concludes the series with actionable insights while leaving listeners motivated and inspired.
+
+# Script:
+# """
 
 
 
@@ -608,48 +837,44 @@ Create a dynamic and engaging TED Talk on "Next Quarter's ABM Deep Dive" focusin
 
 Follow these detailed guidelines to ensure the talk is conversational, insightful, and actionable:
 
-1. **[Introduction]**:
+1. Introduction:
    - Start exactly with "Welcome to Next Quarter's ABM summary on {account_name}'s key personas, prepared exclusively for {client_name}."
    - Provide a concise outline of the talk's key areas: top ABM strategies, persona overview with themes and initiatives, and Account-Based Marketing channel strategies. Emphasize how understanding these elements can drive more effective engagement.
 
-2. **[Top ABM Strategies]**:
+2. Top ABM Strategies:
    - Summarize the top 3 recommendations from the "Potential ABM Strategies Based on Intelligence" section.
    - For each strategy:
-     - Provide a brief overview of the strategy (approximately 50 words).
-     - Highlight key actions and targeted personas (approximately 50 words).
+     - Provide a brief overview of the strategy.
+     - Highlight key actions and targeted personas.
      - Discuss the potential impact and alignment with {client_name}'s offerings (approximately 50 words).
 
-3. **[Persona Deep Dive]**:
+3. Persona Deep Dive:
    - Reference the "Persona Based Overlap of Themes and Initiatives" and "Channel Prediction for ABM to Identified Personas" sections.
    - Merge the information from these tables to create a comprehensive view of each persona.
    - Identify the top 4 personas based on strategic importance and relevance to {client_name}.
    - For each selected persona:
-     - **[Persona Summary]**:
-       - Clearly state the persona's name and job title. Provide a concise summary of their core responsibilities and overall influence within {account_name} (approximately 60 words).
-     - **[Themes and Initiatives]**:
-       - Summarize the key themes and initiatives associated with this persona, focusing on those most relevant to {client_name}'s offerings (approximately 100 words).
-     - **[ABM Channels]**:
-       - Detail the recommended ABM channels for engaging this persona. Explain how these channels align with the persona's preferences and information consumption habits (approximately 60 words).
-   - Keep each persona discussion concise (approximately 220 words total per persona), while focusing on actionable insights.
+     - Persona Summary:
+       - Clearly state the persona's name and job title. Provide a concise summary of their core responsibilities and overall influence within {account_name}.
+     - Themes and Initiatives:
+       - Summarize the key themes and initiatives associated with this persona, focusing on those most relevant to {client_name}'s offerings.
+     - ABM Channels:
+       - Detail the recommended ABM channels for engaging this persona. Explain how these channels align with the persona's preferences and information consumption habits.
+   - Keep each persona discussion concise, while focusing on actionable insights.
 
-4. **[Tone and Delivery]**:
+4. Tone and Delivery:
    - Maintain an enthusiastic and conversational tone throughout the talk.
    - Avoid overly long pauses and forced transitions.
    - Use storytelling techniques to make the discussion relatable and engaging, referencing real-world examples where appropriate.
 
-5. **[Structure]**:
+5. Structure:
    - Conclude with a summary of key takeaways, reinforcing the importance of understanding these personas, aligning with their initiatives, and leveraging appropriate ABM channels. Include a clear and motivational call to action, encouraging listeners to take concrete steps to engage these individuals.
    - End with: "You can always find more details about {account_name}'s key influencers in the full ABM report provided by Next Quarter."
-   - Ensure the entire script is substantial and well-developed. The target length is 900-1100 words to provide sufficient depth and coverage.
 
-6. **[Dialogue Style]**:
-   - Use a single speaker format:
-     - Host1: [Host1's dialogue]
-     - Continue this pattern throughout the script, leading each section for better flow.
+6. Dialogue Style:
    - Focus on natural conversational phrasing without naming the speaker.
    - Encourage lighthearted yet professional dialogue when appropriate.
 
-7. **[Strategic Focus (TED Talk Style)]**:
+7. Strategic Focus (TED Talk Style):
    - Emulate a TED Talk by clearly outlining key points at the beginning, delving into each strategy and persona with engaging, story-driven insights, and concluding with an inspiring and actionable summary.
    - Use compelling examples and narratives to keep listeners engaged while conveying actionable insights about influencing these personas and driving meaningful engagement through appropriate ABM channels.
 
@@ -657,6 +882,63 @@ By following these guidelines, create a compelling TED Talk that is informative,
 
 Script:
 """
+    
+# prompt = f"""
+# Create a dynamic and engaging TED Talk on "Next Quarter's ABM Deep Dive" focusing on strategically important personas for {account_name}, using the provided content as the foundation:
+
+# {file_contents}
+
+# Follow these detailed guidelines to ensure the talk is conversational, insightful, and actionable:
+
+# 1. Introduction:
+#    - Start exactly with "Welcome to Next Quarter's ABM summary on {account_name}'s key personas, prepared exclusively for {client_name}."
+#    - Provide a concise outline of the talk's key areas: top ABM strategies, persona overview with themes and initiatives, and Account-Based Marketing channel strategies. Emphasize how understanding these elements can drive more effective engagement.
+
+# 2. Top ABM Strategies:
+#    - Summarize the top 3 recommendations from the "Potential ABM Strategies Based on Intelligence" section.
+#    - For each strategy:
+#      - Provide a brief overview of the strategy (approximately 50 words).
+#      - Highlight key actions and targeted personas (approximately 50 words).
+#      - Discuss the potential impact and alignment with {client_name}'s offerings (approximately 50 words).
+
+# 3. Persona Deep Dive:
+#    - Reference the "Persona Based Overlap of Themes and Initiatives" and "Channel Prediction for ABM to Identified Personas" sections.
+#    - Merge the information from these tables to create a comprehensive view of each persona.
+#    - Identify the top 4 personas based on strategic importance and relevance to {client_name}.
+#    - For each selected persona:
+#      - Persona Summary:
+#        - Clearly state the persona's name and job title. Provide a concise summary of their core responsibilities and overall influence within {account_name} (approximately 60 words).
+#      - Themes and Initiatives:
+#        - Summarize the key themes and initiatives associated with this persona, focusing on those most relevant to {client_name}'s offerings (approximately 100 words).
+#      - ABM Channels:
+#        - Detail the recommended ABM channels for engaging this persona. Explain how these channels align with the persona's preferences and information consumption habits (approximately 60 words).
+#    - Keep each persona discussion concise (approximately 220 words total per persona), while focusing on actionable insights.
+
+# 4. Tone and Delivery:
+#    - Maintain an enthusiastic and conversational tone throughout the talk.
+#    - Avoid overly long pauses and forced transitions.
+#    - Use storytelling techniques to make the discussion relatable and engaging, referencing real-world examples where appropriate.
+
+# 5. Structure:
+#    - Conclude with a summary of key takeaways, reinforcing the importance of understanding these personas, aligning with their initiatives, and leveraging appropriate ABM channels. Include a clear and motivational call to action, encouraging listeners to take concrete steps to engage these individuals.
+#    - End with: "You can always find more details about {account_name}'s key influencers in the full ABM report provided by Next Quarter."
+#    - Ensure the entire script is substantial and well-developed. The target length is 900-1100 words to provide sufficient depth and coverage.
+
+# 6. Dialogue Style:
+#    - Focus on natural conversational phrasing without naming the speaker.
+#    - Encourage lighthearted yet professional dialogue when appropriate.
+
+# 7. Strategic Focus (TED Talk Style):
+#    - Emulate a TED Talk by clearly outlining key points at the beginning, delving into each strategy and persona with engaging, story-driven insights, and concluding with an inspiring and actionable summary.
+#    - Use compelling examples and narratives to keep listeners engaged while conveying actionable insights about influencing these personas and driving meaningful engagement through appropriate ABM channels.
+
+# By following these guidelines, create a compelling TED Talk that is informative, motivating, and captivates listeners while effectively addressing strategic priorities. Focus on providing actionable advice for engaging key personas through targeted ABM strategies and channels to drive results for {client_name}.
+
+# Script:
+# """
+##    - Use this dialogue format for every dialogue of Host:
+#      - Host: [Host's dialogue]
+#      - Continue this pattern throughout the script, leading each section for better flow.
 
 
     try:
@@ -681,8 +963,8 @@ def process_script(script: str) -> str:
     for line in script.split('\n'):
         line = line.strip()
         line = line.replace('*', '')
-        if line.startswith("Host1:") or line.startswith("Host2:"):
-            processed_lines.append(line)
+        # if line.startswith("Host:"):
+        processed_lines.append(line)
     return '\n'.join(processed_lines)
 
 def text_to_speech_stream(text: str, voice: str):
@@ -705,11 +987,10 @@ def create_podcast(script: str) -> Optional[AudioSegment]:
     audio_segments: List[AudioSegment] = []
     
     def process_line(line: str):
-        if line.startswith("Host1:"):
-            return text_to_speech_stream(line[6:].strip(), voice="ash")
-        elif line.startswith("Host2:"):
-            return text_to_speech_stream(line[6:].strip(), voice="coral")
-        return None
+        # if line.startswith("Host:"):
+        # return text_to_speech_stream(line[6:].strip(), voice="ash")
+        return text_to_speech_stream(line.strip(), voice="ash")
+        # return None
     
     logger.info(f"Starting audio generation for {len(lines)} lines")
     with concurrent.futures.ThreadPoolExecutor() as executor:
@@ -718,7 +999,8 @@ def create_podcast(script: str) -> Optional[AudioSegment]:
     for i, (line, audio_content) in enumerate(zip(lines, audio_streams)):
         if audio_content:
             try:
-                voice = "ash" if line.startswith("Host1:") else "coral"
+                # if line.startswith("Host:"):
+                voice = "ash"
                 logger.info(f"Processing line {i+1}/{len(lines)} for voice: {voice}")
                 logger.info(f"Generating new audio for line {i+1}")
                 
