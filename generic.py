@@ -515,7 +515,7 @@ def main():
                             st.error("Failed to generate briefing audio. Please try again or contact support.")
 
     st.markdown("---")
-    st.markdown("Created by NextQAI")
+    st.markdown("Created by Rishabh Indoria")
 
 
 if __name__ == "__main__":
