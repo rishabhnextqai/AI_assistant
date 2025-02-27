@@ -832,7 +832,7 @@ def main():
 
     with tab2:
         st.header("Audio Briefing Generator")
-        st.write("Naming convention: [Quest_Diagnostics_Intelligence_Report_For_Mastek_(Anything).pdf] or [Quest_Diagnostics_ABM_Report_For_Mastek_(Anything).pdf]")
+        st.write("Naming convention: [Camping_World_Intelligence_Report_For_Acme_(Anything).pdf] or [Camping_World_ABM_Report_For_Acme_(Anything).pdf]")
         podcast_file = st.file_uploader("Upload a file for briefing generation", type=["txt", "pdf", "csv"])
 
         if podcast_file is not None:
