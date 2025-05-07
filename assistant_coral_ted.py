@@ -1164,7 +1164,7 @@ def main():
                                             st.download_button(
                                                 label="Download Executive Summary Briefing",
                                                 data=audio_buffer.getvalue(),
-                                                file_name=f"{account_name}_executive_briefing_for_{client_name}.mp3",
+                                                file_name=f"3.{account_name}_priorities_&_initiatives.mp3",
                                                 mime="audio/mpeg"
                                             )
                                         except Exception as e:
@@ -1184,7 +1184,7 @@ def main():
                                             st.download_button(
                                                 label="Download Business Overview Briefing",
                                                 data=audio_buffer.getvalue(),
-                                                file_name=f"{account_name}_businessoverview_briefing_for_{client_name}.mp3",
+                                                file_name=f"1.{account_name}_overview_&_swot_analysis.mp3.mp3",
                                                 mime="audio/mpeg"
                                             )
                                         except Exception as e:
@@ -1204,7 +1204,7 @@ def main():
                                             st.download_button(
                                                 label="Download Competitiors Briefing",
                                                 data=audio_buffer.getvalue(),
-                                                file_name=f"{account_name}_competitors_briefing_for_{client_name}.mp3",
+                                                file_name=f"2.{account_name}_competitor_insights.mp3",
                                                 mime="audio/mpeg"
                                             )
                                         except Exception as e:
@@ -1224,7 +1224,7 @@ def main():
                                             st.download_button(
                                                 label="Download Stakeholders Briefings",
                                                 data=audio_buffer.getvalue(),
-                                                file_name=f"{account_name}_stakeholders_briefing_for_{client_name}.mp3",
+                                                file_name=f"4.{account_name}_stakeholder_insights.mp3",
                                                 mime="audio/mpeg"
                                             )
                                         except Exception as e:
