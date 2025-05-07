@@ -1184,7 +1184,7 @@ def main():
                                             st.download_button(
                                                 label="Download Business Overview Briefing",
                                                 data=audio_buffer.getvalue(),
-                                                file_name=f"1.{account_name}_overview_&_swot_analysis.mp3.mp3",
+                                                file_name=f"1.{account_name}_overview_&_swot_analysis.mp3",
                                                 mime="audio/mpeg"
                                             )
                                         except Exception as e:
@@ -1244,25 +1244,25 @@ def main():
                                                     with io.BytesIO() as audio_buffer:
                                                         podcast_audio_stakeholders.export(audio_buffer, format="mp3")
                                                         audio_buffer.seek(0)
-                                                        zip_file.writestr(f"{account_name}_stakeholders_briefing_for_{client_name}.mp3", audio_buffer.read())
+                                                        zip_file.writestr(f"4.{account_name}_stakeholder_insights.mp3", audio_buffer.read())
                                                 
                                                 if podcast_audio_competitors:
                                                     with io.BytesIO() as audio_buffer:
                                                         podcast_audio_competitors.export(audio_buffer, format="mp3")
                                                         audio_buffer.seek(0)
-                                                        zip_file.writestr(f"{account_name}_competitors_briefing_for_{client_name}.mp3", audio_buffer.read())
+                                                        zip_file.writestr(f"2.{account_name}_competitor_insights.mp3", audio_buffer.read())
                                                 
                                                 if podcast_audio_businessoverview:
                                                     with io.BytesIO() as audio_buffer:
                                                         podcast_audio_businessoverview.export(audio_buffer, format="mp3")
                                                         audio_buffer.seek(0)
-                                                        zip_file.writestr(f"{account_name}_businessoverview_briefing_for_{client_name}.mp3", audio_buffer.read())
+                                                        zip_file.writestr(f"1.{account_name}_overview_&_swot_analysis.mp3", audio_buffer.read())
                                                 
                                                 if podcast_audio:
                                                     with io.BytesIO() as audio_buffer:
                                                         podcast_audio.export(audio_buffer, format="mp3")
                                                         audio_buffer.seek(0)
-                                                        zip_file.writestr(f"{account_name}_executive_briefing_for_{client_name}.mp3", audio_buffer.read())
+                                                        zip_file.writestr(f"3.{account_name}_priorities_&_initiatives.mp3", audio_buffer.read())
                                             
                                             # Finalize the ZIP file
                                             zip_buffer.seek(0)
